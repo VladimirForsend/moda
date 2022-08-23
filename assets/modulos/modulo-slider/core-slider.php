@@ -27,7 +27,7 @@ function slideshow_register() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => null,
-        'supports' => array('title', 'extract'),
+        'supports'              => array( 'title', 'custom-fields', 'excerpt' ),
         'rewrite' => array('slug' => 'slideshow', 'with_front' => FALSE)
       ); 
 
@@ -104,6 +104,41 @@ if( function_exists('acf_add_local_field_group') ):
                 'max_height' => '',
                 'max_size' => '',
                 'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_6047a816a6470',
+                'label' => 'Texto boton slider',
+                'name' => '',
+                'type' => 'tab',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'placement' => 'top',
+                'endpoint' => 0,
+            ),
+            array(
+                'key' => 'field_6047a825a6471',
+                'label' => 'Texto boton slider',
+                'name' => 'texto_boton_slider',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
             ),
             array(
                 'key' => 'field_6047a8e0fa226',

@@ -150,14 +150,255 @@ select.orderby {
     right: 1rem;
 }
 
-.woocommerce ul.products li.product,
-.woocommerce-page ul.products li.product {
+.archive .woocommerce ul.products li.product,
+.archive .woocommerce-page ul.products li.product {
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
     margin-left: 0px;
     margin-right: 0px;
+    width: 95%;
+}
+
+
+/*archive category*/
+
+.archive.category header {
+    background-color: #fff;
+    position: relative;
+}
+
+.archive.category article header {
+    position: relative;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: #fff;
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+    background-repeat: no-repeat;
+}
+
+.archive.category article header::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    content: '';
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.archive.category header h5 {
+    position: relative;
+    z-index: 10;
+}
+
+.archive.category header h5 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-header.pagina-categoria-archivo {
+    width: 100%;
+    background-color: transparent !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 
 /*tarjetas productos*/
+
+
+/*tarjetas archive*/
+
+.products.lista-productos.grid-archive-comercio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio li .comercio-product-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    border-radius: 0px;
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li {
+    width: 100%;
+    height: auto;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li .comercio-product-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    border-radius: 0px;
+    height: 720px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li img {
+    width: 100%;
+    height: auto;
+    max-width: unset;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    max-height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    object-fit: cover;
+    object-position: top;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li .comercio-product-card .tarjeta-producto-superior {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li .comercio-product-card .tarjeta-producto-superior a {
+    display: flex;
+    height: 720px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.row-archive-comercio {
+    height: 100vh;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .primer-contendor li h2 {
+    z-index: 1;
+    position: relative;
+}
+
+
+/*segundo contenedor*/
+
+.archive.theme-comercio3 #content .row-archive-comercio .segundo-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 720px;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .segundo-contenedor li {
+    width: 50%;
+    margin: 0px !important;
+    padding: 0px;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio li img {
+    width: 100%;
+    height: auto;
+    max-width: unset;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    max-height: unset;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .segundo-contenedor li .comercio-product-card .tarjeta-producto-superior {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .segundo-contenedor li .comercio-product-card .tarjeta-producto-superior a {
+    display: flex;
+    max-height: unset;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 50vh;
+}
+
+.row-archive-comercio {
+    height: auto;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio li h2 {
+    z-index: 1;
+    position: relative;
+    bottom: 140px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    max-width: 200px;
+    color: #fff;
+    left: 20px;
+}
+
+.archive.theme-comercio3.woocommerce #content .row-archive-comercio li.product .price {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+
+/*tarjetas archive*/
+
+.archive.theme-comercio3 #content .row-archive-comercio .tarjeta-producto-inferior {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    z-index: 1;
+    width: 100%;
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.archive.theme-comercio3 #content .row-archive-comercio .segundo-contenedor .button {
+    max-width: 70%;
+    margin: 0px;
+    left: 15px;
+}
+
+.archive .comercio-product-card:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.72) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#000000", GradientType=1);
+}
+
+
+/*tarjetas archive*/

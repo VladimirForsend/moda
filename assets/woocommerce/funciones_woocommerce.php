@@ -117,7 +117,7 @@ function get_variation_sku() {
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
   
-//add_action( 'woocommerce_after_single_product_summary', 'bbloomer_wc_output_long_description', 10 );
+add_action( 'woocommerce_after_single_product_summary', 'bbloomer_wc_output_long_description', 10 );
   
 function woocommerce_template_product_description()
 {
@@ -284,7 +284,7 @@ function bbloomer_add_cart_quantity_plus_minus() {
 
 /**
  * Remove related products output
- */
+ *//*
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 add_filter( 'gettext', 'change_cart_totals_text', 20, 3 );
@@ -311,8 +311,8 @@ add_filter('post_class', function($classes, $class, $product_id) {
     $classes = array_merge(['col-12','col-md-3 mb-3'], $classes);
     return $classes;
 },10,3);
-*/
 
+*/
 
 add_action ( "woocommerce_before_shop_loop_item", "after_li_started", 9 );
 
@@ -384,4 +384,54 @@ function display_order_rut($order)
 {
     $rut = esc_attr(get_post_meta($order->id, '_billing_rut', true));
     echo '<p><strong>' . __('Rut') . ':</strong><br/>' . $rut . '</p>';
+}
+
+
+
+/*descuento*/
+/* Replace text of Sale! badge with percentage */
+
+add_filter( 'woocommerce_sale_flash', 'ds_replace_sale_text' );
+ 
+function ds_replace_sale_text($text) {
+ global $product; 
+ $stock = $product->get_stock_status();
+ $product_type = $product->get_type();
+ $sale_price  = 0;
+ $regular_price = 0;
+ if($product_type == 'variable'){
+  $product_variations = $product->get_available_variations();
+  foreach ($product_variations as $kay => $value){
+   if($value['display_price'] < $value['display_regular_price']){
+    $sale_price = $value['display_price'];
+    $regular_price = $value['display_regular_price'];
+   }
+  }
+  if($regular_price > $sale_price && $stock != 'outofstock') {
+   $product_sale = intval(((intval($regular_price) - floatval($sale_price)) / floatval($regular_price)) * 100);
+   if ($product_sale > 5 ) {
+   return '<span class="onsale"> <span class="sale-icon" aria-hidden="true" data-icon="&#xe0da"></span> ' . esc_html($product_sale) . '% OFF</span>';
+   }
+   if ($product_sale <= 5 ) {
+       return '<span class="onsale"> <span class="sale-icon" aria-hidden="true" data-icon="&#xe0da"></span>Sale!</span>';
+   }
+  }else{
+   return  '';
+  }
+ }else{
+  $regular_price = get_post_meta( get_the_ID(), '_regular_price', true);
+  $sale_price = get_post_meta( get_the_ID(), '_sale_price', true);
+  if($regular_price > 5) {
+   $product_sale = intval(((floatval($regular_price) - floatval($sale_price)) / floatval($regular_price)) * 100);
+   return '<span class="onsale"> <span class="sale-icon" aria-hidden="true" data-icon="&#xe0da"></span> ' . esc_html($product_sale) . '% OFF</span>';
+  }
+  if($regular_price >= 0 && $regular_price <= 5 ) {
+   $product_sale = intval(((floatval($regular_price) - floatval($sale_price)) / floatval($regular_price)) * 100);
+   return '<span class="onsale"> <span class="sale-icon" aria-hidden="true" data-icon="&#xe0da"></span>Sale!</span>';
+  }
+
+  else{
+   return '';
+  }
+ }
 }

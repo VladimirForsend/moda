@@ -19,12 +19,12 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-// Ensure visibility.
+// Ensure visibility. 
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class( 'col-12 col-sm-6 col-md-4 col-lg-3 mb-4', $product ); ?>>
+<li <?php wc_product_class( 'col-12 mb-4', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

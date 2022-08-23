@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The header for our theme
+ * The header for our hola marcos 
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -29,13 +29,13 @@
     <div id="page" class="site sticky-top nav-shadow">
         <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'ecommerce-para-chile'); ?></a>
 
-        <header id="masthead" class="site-header">
+        <header id="masthead" class="site-header comercio-header">
         <div class="d-none d-md-block d-lg-block d-xl-block">
-        <?php include get_template_directory() . '/assets/templates/navs/nav-desk.php'; ?>    
+        <?php include get_template_directory() . '/assets/templates/navs/nav-desk-notburguer.php'; ?>    
         </div>
         <div class="d-block d-md-none d-lg-none d-xl-none">
         <?php include get_template_directory() . '/assets/templates/navs/nav-mobile.php'; ?>
         </div>    
     </header><!-- #masthead -->
-        <?php /* include get_template_directory() . '/preloader.php'; */ ?>
+      
     </div>

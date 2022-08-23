@@ -25,26 +25,24 @@
 
 <body <?php body_class(); ?>>
 
-    <?php wp_body_open(); ?>
+<?php wp_body_open(); ?>
     <div id="page" class="site sticky-top nav-shadow">
         <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'ecommerce-para-chile'); ?></a>
 
-        <header id="masthead" class="site-header">
+        <header id="masthead" class="site-header comercio-header">
         <div class="d-none d-md-block d-lg-block d-xl-block">
-        <?php include get_template_directory() . '/assets/templates/navs/nav-desk.php'; ?>    
+        <?php include get_template_directory() . '/assets/templates/navs/nav-desk-notburguer.php'; ?>    
         </div>
         <div class="d-block d-md-none d-lg-none d-xl-none">
         <?php include get_template_directory() . '/assets/templates/navs/nav-mobile.php'; ?>
         </div>    
-    </header><!-- #masthead -->
-        <?php /* include get_template_directory() . '/preloader.php'; */ ?>
+    </header><!-- #masthead --> 
     </div>
 
     <div class="container-fluid">
         <div class="row">
             <?php require get_template_directory() . '/assets/modulos/modulo-slider/slider.php'; ?>
+        
         </div>
-        <div class="row my-3">
-            <?php include get_template_directory() . '/assets/modulos/modulo-infobox/loop-infobox.php'; ?>
-        </div>
-    </div>
+  
+    </div> 

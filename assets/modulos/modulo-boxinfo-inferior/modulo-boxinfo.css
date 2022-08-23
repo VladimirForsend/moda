@@ -1,0 +1,41 @@
+/*font-size*/
+
+.contenedor-boxinfo a {
+    text-decoration: none;
+}
+
+.big-f {
+    font-size: 8rem;
+    line-height: 87%;
+}
+
+.medium-f {
+    font-size: 4.5rem;
+    line-height: 100%;
+}
+
+.small-f {
+    font-size: 1rem;
+    line-height: 100%;
+    font-weight: 900;
+}
+
+.fontw-bb {
+    font-weight: 900;
+}
+
+.fontw-b {
+    font-weight: 700;
+}
+
+.fontw-m {
+    font-weight: 500;
+}
+
+.fontw-r {
+    font-weight: normal;
+}
+
+.fontw-l {
+    font-weight: 100;
+}

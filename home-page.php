@@ -18,8 +18,19 @@ if (is_front_page()) :
 else :
     get_header();
 endif; ?>
-<main id="primary" class="site-main container">
+<main id="primary" class="site-main container-fluid">
+
+   
     <div class="row">
+
+
+    <!-- boxinfo -->
+    <?php include get_template_directory() . '/assets/modulos/modulo-boxinfo/loop-modulo-boxinfo.php'; ?>
+    <!-- boxinfo -->
+    <!-- carrusel de logo -->
+   
+    <?php include get_template_directory() . '/assets/modulos/modulo-carrusel-logos/loop-carrusel-logos.php'; ?>
+    <!-- carrusel de logo -->
         <?php
         if (have_posts()) :
 
@@ -51,8 +62,12 @@ endif; ?>
 
         endif;
         ?>
+
+    <!-- boxinfo inferior-->
+    <?php include get_template_directory() . '/assets/modulos/modulo-boxinfo-inferior/loop-modulo-boxinfo-inferior.php'; ?>
+    <!-- boxinfo inferior-->
     </div>
-</main><!-- #main -->
+</main><!-- #main --> 
 
 <?php
 get_footer();

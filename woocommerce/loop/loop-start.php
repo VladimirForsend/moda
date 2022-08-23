@@ -3,7 +3,7 @@
  * Product Loop Start
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/loop/loop-start.php.
- *
+ * 
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
  * maintain compatibility. We try to do this as little as possible, but it does
@@ -19,6 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products col-12 lista-productos">
-    <div class="container-fluid p-sm-0">
-        <div class="row mb-3">
+<?php woocommerce_breadcrumb(); ?>
+<ul class="products container p-sm-0 lista-productos grid-archive-comercio">
+

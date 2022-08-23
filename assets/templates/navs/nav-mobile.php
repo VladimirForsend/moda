@@ -1,9 +1,9 @@
-<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light bg-light nav-mobile">
+<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light nav-mobile">
     <!---conatiner-->
     <div class="container-fluid">
         <!---row-->
-        <div class="row w-100 mx-auto">
-            <!---navbrand--><div class="navbar-brand col-9">
+        <div class="row w-100 d-flex justify-content-between">
+            <!---navbrand--><div class="navbar-brand col-3">
                 <?php
                 the_custom_logo();
                 if (is_front_page() && is_home()) :
@@ -25,7 +25,11 @@
           
 
             <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <div class="boton-hamburguesa">
+                            <span class="linea-hamburguesa"></span>
+                            <span class="linea-hamburguesa"></span>
+                            <span class="linea-hamburguesa"></span>
+                        </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -39,7 +43,7 @@
                     )
                 );
                 ?>
-
+ 
 <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form( true, array( 'id' => '62968e5c35f00' ) ); } ?>
             </div>
         </div>

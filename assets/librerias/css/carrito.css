@@ -27,13 +27,15 @@
 }
 
 .checkout-button.button.alt.wc-forward {
-    background-color: var(--color-cliente);
+    background-color: #000;
 }
+
 .checkout-button.button.alt.wc-forward:hover {
-	background-color: var(--color-cliente);
+    background-color: #000;
 }
+
 .button:hover {
-    background-color: #88d700;
+    background-color: #000;
     -webkit-transition: box-shadow .1s ease-out;
     transition: box-shadow .1s ease-out;
     box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);

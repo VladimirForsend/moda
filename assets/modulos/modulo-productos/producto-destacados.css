@@ -1,0 +1,169 @@
+.carusel--productos .tarjeta-producto-superior {
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.carusel--productos .comercio-product-card {
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 0rem;
+    text-align: left;
+    background: transparent;
+    box-shadow: unset;
+}
+
+.carusel--productos .comercio-product-card:hover {
+    background: transparent!important;
+    box-shadow: unset!important;
+}
+
+.carusel--productos .tarjeta-producto-superior:hover {
+    -webkit-transition: box-shadow .1s ease-out;
+    transition: box-shadow .1s ease-out;
+    box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);
+}
+
+.carusel--productos .lista-productos li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    text-align: left;
+}
+
+.carusel--productos .lista-productos .price {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.carusel--productos .lista-productos .onsale {
+    position: absolute;
+    z-index: 1;
+    padding: .3rem;
+    font-size: .9rem;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.carusel--productos .tarjeta-producto-inferior {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 1.5rem;
+}
+
+.carusel--productos .tarjeta-producto-inferior h2,
+.carusel--productos .tarjeta-producto-inferior p {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left!important;
+    position: relative;
+    z-index: 1;
+}
+
+.carusel--productos .tarjeta-producto-inferior h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    max-width: 200px;
+}
+
+.carusel--productos .tarjeta-producto-inferior:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#000000", GradientType=1);
+}
+
+
+/* controles del slider */
+
+.carusel--productos .slick-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    border-radius: 100px;
+    font-size: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.carusel--productos .slick-slider .slick-prev {
+    left: -50px;
+}
+
+.carusel--productos .slick-slider .slick-prev::after {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    padding: .5rem;
+    font-size: 60px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-transform: uppercase;
+    color: #707070;
+}
+
+.carusel--productos .slick-slider .slick-next {
+    right: -50px;
+}
+
+.carusel--productos .slick-slider .slick-next::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    padding: .5rem;
+    font-size: 60px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-transform: uppercase;
+    color: #707070;
+}

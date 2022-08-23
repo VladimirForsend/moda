@@ -1,5 +1,9 @@
+<style>
+    <?php include get_template_directory() . '/assets/modulos/modulo-carrusel-logos/modulo-carrusel-logo.css'; ?>
+</style>
+
 <div id="carrusel_logos" class="container">
-<h3 class="text-center">Marcas que trabajamos</h3>
+<h3 class="text-center titulo-secciones"><?php the_field('titulo_marcas');?></h3>
 
    <!--Slider--> 
    <div class="carousel slide col-12 col-md-12  mt-3 customer-logos">

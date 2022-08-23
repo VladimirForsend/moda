@@ -1,0 +1,13 @@
+/*header*/
+
+#masthead {
+    position: relative;
+    border-bottom: 0px solid #ededed;
+}
+
+.home #masthead {
+    /*position: absolute;*/
+    z-index: 100;
+    width: 100%;
+    border-bottom: 0px solid #ededed;
+}
